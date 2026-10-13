@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelin - Jelajahi Indonesia</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f9fc;
+      color: #222;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.95);
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #00a8cc;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00a8cc;
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      background:
+        linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+        url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #00a8cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: .3s;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background: #007c99;
+      transform: translateY(-2px);
+    }
+
+    /* Section */
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #123;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #777;
+    }
+
+    /* Destinations */
+    .destinations {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,.1);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 10px;
+      color: #123;
+    }
+
+    .card-content p {
+      color: #777;
+      line-height: 1.6;
+    }
+
+    /* Paket */
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .package {
+      background: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .package h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      color: #00a8cc;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .package ul {
+      list-style: none;
+      line-height: 2;
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    /* Footer */
+    footer {
+      background: #092b3a;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero-content h1 {
+        font-size: 38px;
+      }
+
+      .destinations,
+      .packages {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Travelin</div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#destinasi">Destinasi</a></li>
+      <li><a href="#paket">Paket Wisata</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Jelajahi Dunia Bersama Kami</h1>
+      <p>Temukan destinasi impian dan ciptakan kenangan tak terlupakan.</p>
+      <a href="#destinasi" class="btn">Mulai Traveling</a>
+    </div>
+  </section>
+
+  <!-- Destinasi -->
+  <section id="destinasi">
+    <div class="section-title">
+      <h2>Destinasi Populer</h2>
+      <p>Beberapa tempat terbaik yang wajib kamu kunjungi.</p>
+    </div>
+
+    <div class="destinations">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80">
+        <div class="card-content">
+          <h3>🌴 Bali</h3>
+          <p>Nikmati pantai, budaya, kuliner, dan keindahan alam Pulau Dewata.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80">
+        <div class="card-content">
+          <h3>🏝️ Lombok</h3>
+          <p>Rasakan keindahan pantai dan pesona alam Lombok yang luar biasa.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80">
+        <div class="card-content">
+          <h3>⛰️ Yogyakarta</h3>
+          <p>Jelajahi budaya, sejarah, kuliner, dan berbagai destinasi menarik.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Paket Wisata -->
+  <section id="paket">
+    <div class="section-title">
+      <h2>Paket Wisata</h2>
+      <p>Pilih paket perjalanan sesuai kebutuhanmu.</p>
+    </div>
+
+    <div class="packages">
+
+      <div class="package">
+        <h3>Basic Trip</h3>
+        <div class="price">Rp1.500.000</div>
+        <ul>
+          <li>✓ Hotel 2 malam</li>
+          <li>✓ Transportasi</li>
+          <li>✓ Tour Guide</li>
+          <li>✓ Sarapan</li>
+        </ul>
+        <button class="btn" onclick="booking('Basic Trip')">
+          Booking
+        </button>
+      </div>
+
+      <div class="package">
+        <h3>Premium Trip</h3>
+        <div class="price">Rp3.000.000</div>
+        <ul>
+          <li>✓ Hotel 4 malam</li>
+          <li>✓ Transportasi</li>
+          <li>✓ Private Guide</li>
+          <li>✓ Semua makanan</li>
+        </ul>
+        <button class="btn" onclick="booking('Premium Trip')">
+          Booking
+        </button>
+      </div>
+
+      <div class="package">
+        <h3>Luxury Trip</h3>
+        <div class="price">Rp5.500.000</div>
+        <ul>
+          <li>✓ Hotel Luxury</li>
+          <li>✓ Private Transport</li>
+          <li>✓ Private Guide</li>
+          <li>✓ All Inclusive</li>
+        </ul>
+        <button class="btn" onclick="booking('Luxury Trip')">
+          Booking
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak">
+    <div class="section-title">
+      <h2>Siap Berpetualang?</h2>
+      <p>Hubungi kami dan mulai perjalananmu sekarang.</p>
+      <br>
+      <button class="btn" onclick="contactUs()">
+        Hubungi Kami
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Travelin. Jelajahi Indonesia bersama kami 🌏</p>
+  </footer>
+
+  <script>
+    function booking(paket) {
+      alert(
+        "Terima kasih! Kamu memilih paket " +
+        paket +
+        ". Silakan hubungi kami untuk melanjutkan booking."
+      );
+    }
+
+    function contactUs() {
+      alert("Silakan hubungi WhatsApp kami di 0812-3456-7890");
+    }
+  </script>
+
+</body>
+</html>
